@@ -81,8 +81,8 @@ public class WorkCount {
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
         job.setJarByClass(WorkCount.class);
-        FileInputFormat.addInputPath(job, new Path("C:\\software\\LocalPreject\\mapreduce\\input"));
-        FileOutputFormat.setOutputPath(job, new Path("C:\\software\\LocalPreject\\mapreduce\\output"));
+        FileInputFormat.addInputPath(job, new Path("./input"));
+        FileOutputFormat.setOutputPath(job, new Path("./output"));
 
         boolean b = job.waitForCompletion(true);
         System.out.println(b);
