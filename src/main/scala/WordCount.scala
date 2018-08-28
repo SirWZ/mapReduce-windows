@@ -58,8 +58,8 @@ object WordCount {
     job.setJarByClass(WordCount.getClass)
     job.setOutputKeyClass(classOf[Text])
     job.setOutputValueClass(classOf[IntWritable])
-    FileInputFormat.addInputPath(job, new Path("C:\\software\\LocalPreject\\mapreduce\\input"))
-    FileOutputFormat.setOutputPath(job, new Path("C:\\software\\LocalPreject\\mapreduce\\output"))
+    FileInputFormat.addInputPath(job, new Path("./input"))
+    FileOutputFormat.setOutputPath(job, new Path("./output"))
     val bool = job.waitForCompletion(true)
     println(bool)
 
